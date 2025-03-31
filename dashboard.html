@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Agência de Eventos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Dashboard</h1>
+            <nav class="nav">
+                <a href="dashboard.html"class="active">Dashboard</a>
+                <a href="eventos.html">Gerênciar Eventos</a>
+                <a href="clientes.html" >Gerênciar Clientes</a>
+            </nav>
+        </header>
+
+        <div class="card">
+            <h2>Visão Geral</h2>
+            <div class="dashboard-cards">
+                <div class="dashboard-card">
+                    <h3>Eventos Hoje</h3>
+                    <div class="value" id="eventosHoje">0</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Eventos Pendentes</h3>
+                    <div class="value" id="eventosPendentes">0</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Clientes Ativos</h3>
+                    <div class="value" id="clientesAtivos">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Próximos Eventos</h2>
+            <div class="table-container">
+                <table class="table" id="proximosEventos">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Data</th>
+                            <th>Local</th>
+                            <th>Cliente</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Exibe os eventos via js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+</html>

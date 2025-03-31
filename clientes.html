@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Clientes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Dashboard</h1>
+            <nav class="nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="eventos.html">Gerênciar Eventos</a>
+                <a href="clientes.html" class="active">Gerênciar Clientes</a>
+            </nav>
+        </header>
+
+        <section class="form-section">
+            <h2>Cadastrar Novo Cliente</h2>
+            <form id="formCliente">
+                <input type="hidden" id="clienteId">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço:</label>
+                    <textarea id="endereco"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="observacoes">Observações:</label>
+                    <textarea id="observacoes"></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Salvar Cliente</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Clientes Cadastrados</h2>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar cliente...">
+                <button id="searchBtn">Buscar</button>
+            </div>
+            <table id="tabelaClientes">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>E-mail</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
